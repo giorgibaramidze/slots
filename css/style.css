@@ -1,0 +1,303 @@
+*{
+	margin: 0px; 
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+.container{
+	display:flex;
+	width: 100%;
+	background: #1A1E23;
+}
+
+.container .side-bar{
+	position: fixed;
+	height: 100%;
+	width: 77.62px;
+	background: #2A3139;	
+}
+
+.container .side-bar__decoration{ width: 80px;}
+		
+.container .side-bar ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;		
+}
+
+.container .side-bar .logo{
+			margin-top: 10px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+		}
+		
+		.container .side-bar ul .side-bar__menu{
+			position: relative;
+			margin-top: 2px;
+			width: 100%;
+			height: 77px;
+
+
+		}
+		.container .side-bar ul .side-bar__menu a{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+
+
+		}
+		.container .side-bar ul a .title{
+			margin-top: 6px;
+			color: #6A7787;
+			font-size: 14px;
+			transition:all 0.2s;
+		}
+		.container .side-bar ul a svg{
+			width: 29px;
+			fill: #6A7787;
+			margin-top: 4px;
+			transition:all 0.2s;
+		}
+		.container .side-bar ul li a::after{
+			content: '';
+			position:absolute;
+			width: 2.91px;
+			left: 0;
+			height: 0%;
+			background-color: #189541;
+			transition:all 0.2s;
+
+		}
+		.container .side-bar ul li a:hover::after{
+			height: 100%;
+		}
+		.container .side-bar ul li a:hover .title{
+			color:#ffffff;
+		}
+		.container .side-bar ul li a:hover svg{
+			fill:#ffffff;
+		}
+
+		/*		content*/
+.content{
+	background: #1A1E23;
+	width: 100%;
+}
+
+.content header{
+	height: 60px;
+	background: #252B33;			
+}
+
+.content main .slider{
+	width: 100%;
+	height: 420px;
+}
+
+.content main{
+	padding: 6px;
+}
+
+.content main .slider img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+		/*nav*/
+.content main nav{
+	color:#ffffff;
+	background: #1D242C;
+}
+
+.content main nav a{
+	color: #ffffff;
+}
+
+.content main nav .top-nav{
+	height: 53px;
+}
+
+.content main nav .top-nav ul{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+main nav .top-nav ul li{
+	margin-left: 20px;
+	height: 100%;
+	text-align: center;
+}
+
+main nav .top-nav ul li a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-size: 14px;
+}
+
+main nav .top-nav ul li a span{
+	position: absolute;
+	top: 8px;
+	right:0;
+	font-size: 11px;
+}
+
+main nav .top-nav ul li .title{
+	text-align: center;
+	padding: 13px;
+}
+
+main nav .top-nav ul li a::after{
+	content: '';
+	background: #15AF44;
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+	visibility: hidden;
+}
+
+main nav .top-nav ul li a:hover::after{
+	visibility: visible;
+}
+
+main nav .top-nav ul li a:hover span{
+	color: #15AF44;
+}
+
+main nav .bottom-nav{
+	display: flex;
+	justify-content: space-between;
+	background: #272D36;
+	min-height: 53px;
+
+	align-items: center;
+	padding: 0 25px 0 10px;
+}
+
+main nav .bottom-nav ul{
+	display: flex;
+	font-size: 14px;
+	flex-wrap: wrap;
+}
+
+main nav .bottom-nav ul li{
+	margin-left: 15px;
+}
+
+/*slots section*/
+
+main .slot-list{
+	margin-top: 10px;
+	display: grid;
+	grid-gap: 7px;
+	grid-template-columns: repeat(auto-fill, minmax(216.38px, 1fr));
+	grid-auto-rows: 178px;
+	width: 100%;
+}
+
+main .slot-box{
+	background: #252B33;
+	display: flex;
+	flex-direction: column;
+	border-radius: 3px;
+	position: relative;
+	transition:all 0.3s;
+}
+
+main .first-slot-box{
+	grid-column:1/3;
+	grid-row: 1/3;
+	display: grid;
+	grid-auto-rows:325px 38px;
+}
+
+
+
+main .slot-box .slot-cover{
+	width: 100%;
+	height:140px;
+	font-size: 14px;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+
+}
+
+.slot-image{
+	width: 100%;
+	height:100%;
+}
+
+main .slot-box .slot-title{
+	height: 38px;
+	width: 100%;
+}
+main .slot-box .slot-title{
+	margin-top: 10px;
+	margin-left: 10px;
+	color: #fff;
+}
+main .slot-box .play{
+	position: absolute;
+	z-index: 10;
+	top: 30%;
+	
+	border-radius: 4px;
+	font-size: 16px;
+	width: 181.45px;
+	height: 36px;
+	background: #15AF44;
+	text-align: center;
+	line-height: 30px;
+	transition:all 0.3s;
+	opacity: 0;
+
+}
+main .first-slot-box .slot-cover{
+	height: 325px;
+	display: flex;
+	align-items:center;
+	justify-content: center; 
+} 
+main .first-slot-box .play{
+	top: 40%;
+}
+main .slot-box:hover{
+	background: #454D57;
+	
+}
+main .slot-box:hover .slot-image{
+	opacity: 0.6;
+	background: black;
+}
+main .slot-box:hover .play{
+	opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  main .first-slot-box{
+  	display: none;
+  }
+  .content main .slider{
+  	height: auto;
+  }
+}
